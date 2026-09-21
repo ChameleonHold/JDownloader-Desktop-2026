@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            margin: 0;
+            background: #f5f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .panel {
+            width: 700px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,.12);
+            padding: 24px;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #2d3436;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .priority {
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #4b7bec;
+            color: white;
+            font-size: 13px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #20bf6b;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #18a55b;
+        }
+
+        #result {
+            margin-top: 18px;
+            font-weight: bold;
+            color: #2d3436;
+        }
+    </style>
+</head>
+<body>
+
+<div class="panel">
+
+    <h1>Task Dashboard</h1>
+
+    <div class="task">
+        <span>Prepare Monthly Report</span>
+        <span class="priority">High</span>
+    </div>
+
+    <div class="task">
+        <span>Review Pull Requests</span>
+        <span class="priority">Medium</span>
+    </div>
+
+    <div class="task">
+        <span>Update Documentation</span>
+        <span class="priority">Low</span>
+    </div>
+
+    
+    <div class="task">
+        <span>Deploy New Release</span>
+        <span class="priority">High</span>
+    </div>
+
+    <button onclick="updateDashboard()">
+        Update Dashboard
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function updateDashboard() {
+    const output = document.getElementById("result");
+
+    output.textContent =
+        "Task dashboard synchronized successfully.";
+}
+</script>
+
+</body>
+</html>
